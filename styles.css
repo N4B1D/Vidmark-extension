@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #6c63ff;
+  --background: #1a1a2e;
+  --text-color: #ffffff;
+  --card-bg: #252542;
+}
+
+body {
+  width: 350px;
+  margin: 0;
+  padding: 16px;
+  background: var(--background);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  animation: fadeIn 0.3s ease-in;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 16px 0;
+  background: linear-gradient(45deg, #6c63ff, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.primary-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+.bookmark-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  animation: slideIn 0.3s ease-out;
+}
+
+.bookmark-content {
+  flex: 1;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s;
+  border-radius: 50%;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  background: rgba(255, 107, 107, 0.1);
+  transform: scale(1.1);
+}
+
+.bookmark-card:hover {
+  transform: translateX(5px);
+}
+
+.bookmark-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bookmark-timestamp {
+  color: var(--primary-color);
+  font-size: 0.9em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
